@@ -40,7 +40,7 @@ public class Main {
     }
 
     public void boardcast(String message, UserThread excludeUser){ //Delivers a message from one to others ( broadcasting)
-        for (UserThread aUser : userThreads) { //for-each loop - itorates through the userThreads?????
+        for (UserThread aUser : userThreads) { //for-each loop - itorates through the userThreads
             if (aUser != excludeUser) { // not equal to// excludeUser?
                 aUser.sendMessage(message);
             }
@@ -54,7 +54,7 @@ public class Main {
         boolean removed = userNames.remove(userName);
         if (removed) {
             userThreads.remove(aUser); //close the Thread
-            System.out.println("the user: " + userName + " quitted");
+            System.out.println("the user: <<" + userName + ">> quitted");
         }
     }
     public Set<String> getUserNames() { //gets the Set

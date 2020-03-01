@@ -37,7 +37,7 @@ public class ReadThread extends Thread {
 
                 //Prints the username after displaying the server's message
                 if (client.getUserName() != null) {
-                    System.out.println("[" + client.getUserName() + "]: ");
+                    System.out.println("<<" + client.getUserName() + ">>: ");
                 }
             } catch (IOException ex) {
                 System.out.println("You have left the chat");

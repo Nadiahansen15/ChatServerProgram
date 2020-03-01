@@ -51,7 +51,7 @@ public void run(){
         String clientMessage;
         do{ //do this as long as clientmessage is not bye! // keep reading messages and sending to others.
             clientMessage = reader.readLine();
-            serverMessage = "[" + userName + "]: " +clientMessage;
+            serverMessage = "<<" + userName + ">>: " +clientMessage;
             server.boardcast(serverMessage, this);
 
             // if Clientmessage is bye , do this // Notifies the others and closes the connection.
@@ -60,7 +60,7 @@ public void run(){
         server.removeUser(userName,this);
         socket.close();
 
-        serverMessage = userName + " has quitted";
+        serverMessage = "<<" + userName + ">> has quitted";
         server.boardcast(serverMessage,this);
         } catch (IOException ex) {
         System.out.println("Error in UserThread: " + ex.getMessage());

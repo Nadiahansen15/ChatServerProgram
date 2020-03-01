@@ -5,6 +5,7 @@ import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Date;
 
 //This is the chat Client Program
 public class Main {
@@ -23,6 +24,7 @@ public class Main {
         try {
             Socket socket = new Socket(hostname, port);
 
+            Date date = new Date();
             System.out.println("Connected to the chat server");
 
             new ReadThread(socket,this).start();
